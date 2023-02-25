@@ -1,0 +1,202 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{deedy-resume-openfont}
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+ 
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Bryan}{Orabutt}{  \urlstyle{same}\href{mailto:bryan@bryanorabutt.com}{bryan@bryanorabutt.com} | \urlstyle{same}\href{http://www.github.com/BryanOrabutt}{github.com/BryanOrabutt} | \urlstyle{same}\href{http://www.bryanorabutt.com}{bryanorabutt.com} | 217-299-8623 
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.31\textwidth} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Programming}
+C \textbullet{}   Python \textbullet{} MATLAB \textbullet{} C++ \\ 
+Assembly \textbullet{} Verilog \textbullet{} VerilogA 
+\sectionsep
+
+\subsection{Tools}
+Cadence IC Tools \textbullet{} KiCAD \\
+Calibre DRC/LVS/PEX \textbullet{} Git
+\sectionsep
+
+\subsection{Embedded Platforms}
+Arduino \textbullet{} PSoC \textbullet{} Raspberry Pi\\
+Beaglebone \textbullet{} ESP32
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{Washington University \\in St. Louis} 
+\descript{MS in Computer Engineering}
+\location{May 2022| St. Louis, MO}
+\sectionsep
+
+\subsection{Southern Illinois \\University Edwardsville}
+\descript{MS in Electrical Engineering}
+\location{August 2018 | Edwardsville, IL}
+\sectionsep
+\descript{BS in Computer Engineering}
+\location{December 2015 |  Edwardsville, IL}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Interests
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Interests}
+I am an engineer at heart and love to make things. I enjoy embedded programming, circuit design, and 3D printing.\\
+\sectionsep
+You can also often find me playing board games and table top RPGs with friends, or out foraging for wild mushrooms.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+\runsubsection{Intel}
+\descript{| Product Development Engineer }
+\location{Jan 2022 - Present | Hillsboro, OR}
+\sectionsep
+
+\runsubsection{Southern Illinois University Edwardsville}
+\descript{| Lecturer }
+\location{August 2018 – December 2018 | Edwardsville, IL}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Stuff
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     RESEARCH
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Research}
+\runsubsection{WUSTL Radiochemistry Lab}
+\descript{| Doctoral Candidate}
+\location{Jan 2019 – Jan 2022 | St. Louis, MO}
+TODO: fill out stuff 
+\sectionsep
+
+\runsubsection{SIUE VLSI Design Lab}
+\descript{| Graduate Researcher}
+\location{Jan 2016 – August 2018 | Edwardsville, IL}
+TODO: fill out stuff
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Projects
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Academic Projects}
+\runsubsection{Machine Learning Accelerator}
+\descript{| Synopsys DC, Verilog, C}
+\location{Washington University in St. Louis}
+TODO: fill out stuff 
+\sectionsep
+
+\runsubsection{Real-time GPIO Interrupt}
+\descript{| Raspberry Pi, C, Linux, PSoC}
+\location{Southern Illinois University Edwardsville}
+TODO: fill out stuff
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PUBLICATIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Publications} 
+\renewcommand\refname{\vskip -1.5em} % Couldn't get this working from the .cls file
+\bibliographystyle{abbrv}
+\bibliography{publications}
+\nocite{*}
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
