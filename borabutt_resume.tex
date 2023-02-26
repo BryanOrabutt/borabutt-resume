@@ -82,7 +82,8 @@
 \section{Skills}
 \subsection{Programming}
 C \textbullet{}   Python \textbullet{} MATLAB \textbullet{} C++ \\ 
-Assembly \textbullet{} Verilog \textbullet{} VerilogA 
+OTPL \textbullet{} Verilog \textbullet{} VerilogA \\
+Assembly \textbullet{} JSL
 \sectionsep
 
 \subsection{Tools}
@@ -143,14 +144,19 @@ You can also often find me playing board games and table top RPGs with friends, 
 \runsubsection{Intel}
 \descript{| Product Development Engineer }
 \location{Jan 2022 - Present | Hillsboro, OR}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Developed OTPL test programs for sorting singulated die. Collected and analyzed data for performing failure analysis and feeding back into the foundry for process improvements. 
+\item Developed a python script for automating OTPL test plan generation to reduce test time across multiple products.
+\end{tightemize}
 \sectionsep
 
 \runsubsection{Southern Illinois University Edwardsville}
 \descript{| Lecturer }
 \location{August 2018 – December 2018 | Edwardsville, IL}
-\vspace{\topsep} % Hacky fix for awkward extra vertical space
+%\vspace{\topsep} % Hacky fix for awkward extra vertical space
 \begin{tightemize}
-\item Stuff
+\item Prepared and delivered lecture material to over 80 students across two courses: \emph{Intro to Electronics} and \emph{Intro to VLSI Design} courses.
 \end{tightemize}
 \sectionsep
 
@@ -160,15 +166,21 @@ You can also often find me playing board games and table top RPGs with friends, 
 
 \section{Research}
 \runsubsection{WUSTL Radiochemistry Lab}
-\descript{| Doctoral Candidate}
+\descript{| Doctoral Research}
 \location{Jan 2019 – Jan 2022 | St. Louis, MO}
-TODO: fill out stuff 
+\begin{tightemize}
+\item Worked with \textbf{Dr. Roger Chamberlain} and \textbf{Dr. Lee Sobotka} to develope Verilog-A models to simulate new mixed-mode pulse processing electronics.
+\item Supported the development of new iterations on existing pulse processing electronics for particle identification and heavy ion energy measurements.
+\end{tightemize}
 \sectionsep
 
 \runsubsection{SIUE VLSI Design Lab}
-\descript{| Graduate Researcher}
+\descript{| Master's Research}
 \location{Jan 2016 – August 2018 | Edwardsville, IL}
-TODO: fill out stuff
+\begin{tightemize}
+\item Worked with \textbf{Dr. George Engel} to devlop a new analog ASIC for detecting the onset of radiation at a scintillator detector. 
+\item Engaged in all aspects of the development: from design, schematic entry, simulation, layout, and final testing of the packaged silicon. 
+\end{tightemize}
 \sectionsep
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -176,16 +188,23 @@ TODO: fill out stuff
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Academic Projects}
-\runsubsection{Machine Learning Accelerator}
-\descript{| Synopsys DC, Verilog, C}
+\runsubsection{ML Accelerator}
+\descript{| Cadence Encounter, Verilog, C}
 \location{Washington University in St. Louis}
-TODO: fill out stuff 
+\begin{tightemize}
+\item Designed a machine learning accelerator for the MNIST data set comprised of multiple pipelined multiply accumulator units with an input/output RAM. 
+\item Wrote a C program to model and train the neural network, obtaining the weight matrices for testing the accelerator design.
+\end{tightemize}
 \sectionsep
 
 \runsubsection{Real-time GPIO Interrupt}
 \descript{| Raspberry Pi, C, Linux, PSoC}
 \location{Southern Illinois University Edwardsville}
-TODO: fill out stuff
+\begin{tightemize}
+\item Developed a project to reduce IRQ latency on the Raspberry Pi GPIO using a kernel driver and user space library. 
+\item The user space library uses a character device to cause blocking reads until a GPIO interrupt is detected. 
+\item The kernel driver uses a FIFO with real time scheduling to schedule IRQ handlers for each GPIO request, alerting user space via the character device.
+\end{tightemize}
 \sectionsep
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
